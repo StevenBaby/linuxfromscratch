@@ -37,3 +37,11 @@ ifeq ($(wildcard ~/sources/wget-list),)
 else
 	cp ~/sources/* $(LFS)/sources
 endif
+
+.PHONY: chapter5
+chapter5:
+	bash c5/binutils.sh
+	bash c5/gcc.sh
+	bash c5/linux.sh
+	bash c5/glibc.sh
+	bash c5/libstdc++.sh
