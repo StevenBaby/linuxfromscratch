@@ -66,3 +66,18 @@ chapter6:
 	bash c6/xz.sh
 	bash c6/binutils.sh
 	bash c6/gcc.sh
+
+.PHONY: chroot
+chroot:
+	bash c7/chroot.sh
+
+.PHONY: chapter7
+chapter7:
+	bash c7/setup.sh
+	bash c7/python.sh
+	bash c7/gettext.sh
+	bash c7/bison.sh
+	bash c7/perl.sh
+	bash c7/texinfo.sh
+	bash c7/util-linux.sh
+	bash c7/cleanup.sh
