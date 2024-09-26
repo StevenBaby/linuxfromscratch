@@ -173,3 +173,10 @@ chapter8:
 	bash c8/sysvinit.sh
 	bash c8/strip.sh
 	bash c8/cleanup.sh
+
+.PHONY: chapter9
+chapter9:
+	bash c9/lfs-bootscripts.sh
+	bash c9/config.network.sh
+	bash c9/config.sysvinit.sh
+	bash c9/config.others.sh
