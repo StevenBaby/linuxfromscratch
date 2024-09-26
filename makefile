@@ -180,3 +180,9 @@ chapter9:
 	bash c9/config.network.sh
 	bash c9/config.sysvinit.sh
 	bash c9/config.others.sh
+
+.PHONY: chapter10
+chapter10:
+	bash c10/config.fstab.sh
+	bash c10/linux.sh
+	bash c10/grub.sh
