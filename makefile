@@ -81,3 +81,95 @@ chapter7:
 	bash c7/texinfo.sh
 	bash c7/util-linux.sh
 	bash c7/cleanup.sh
+
+
+.PHONY: chapter8
+chapter8:
+	$(eval PASSWD:=$(shell read -p "Set root password:" PASSWD ;echo $$PASSWD))
+	bash c8/man-pages.sh
+	bash c8/iana-etc.sh
+	bash c8/glibc.sh
+	bash c8/config.glibc.sh
+	bash c8/zlib.sh
+	bash c8/bzip2.sh
+	bash c8/xz.sh
+	bash c8/lz4.sh
+	bash c8/zstd.sh
+	bash c8/file.sh
+	bash c8/readline.sh
+	bash c8/m4.sh
+	bash c8/bc.sh
+	bash c8/flex.sh
+	bash c8/tcl.sh
+	bash c8/expect.sh
+	bash c8/dejagnu.sh
+	bash c8/pkgconf.sh
+	bash c8/binutils.sh
+	bash c8/gmp.sh
+	bash c8/mpfr.sh
+	bash c8/mpc.sh
+	bash c8/attr.sh
+	bash c8/acl.sh
+	bash c8/libcap.sh
+	bash c8/libxcrypt.sh
+	bash c8/shadow.sh
+	bash c8/config.shadow.sh
+	echo $(PASSWD) | passwd root --stdin
+
+	bash c8/gcc.sh
+	bash c8/ncurses.sh
+	bash c8/sed.sh
+	bash c8/psmisc.sh
+	bash c8/gettext.sh
+	bash c8/bison.sh
+	bash c8/grep.sh
+	bash c8/bash.sh
+	bash c8/libtool.sh
+	bash c8/gdbm.sh
+	bash c8/gperf.sh
+	bash c8/expat.sh
+	bash c8/inetutils.sh
+	bash c8/less.sh
+	bash c8/perl.sh
+	bash c8/xml.sh
+	bash c8/intltool.sh
+	bash c8/autoconf.sh
+	bash c8/automake.sh
+	bash c8/openssl.sh
+	bash c8/kmod.sh
+	bash c8/libelf.sh
+	bash c8/libffi.sh
+	bash c8/python.sh
+	bash c8/flit.sh
+	bash c8/wheel.sh
+	bash c8/setuptools.sh
+	bash c8/ninja.sh
+	bash c8/meson.sh
+	bash c8/coreutils.sh
+	bash c8/check.sh
+	bash c8/diffutils.sh
+	bash c8/gawk.sh
+	bash c8/findutils.sh
+	bash c8/groff.sh
+	bash c8/grub.sh
+	bash c8/gzip.sh
+	bash c8/iproute.sh
+	bash c8/kbd.sh
+	bash c8/libpipeline.sh
+	bash c8/make.sh
+	bash c8/patch.sh
+	bash c8/tar.sh
+	bash c8/texinfo.sh
+	bash c8/vim.sh
+	bash c8/config.vim.sh
+	bash c8/markupsafe.sh
+	bash c8/jinja2.sh
+	bash c8/udev.sh
+	bash c8/man-db.sh
+	bash c8/procps-ng.sh
+	bash c8/util-linux.sh
+	bash c8/e2fsprogs.sh
+	bash c8/sysklogd.sh
+	bash c8/sysvinit.sh
+	bash c8/strip.sh
+	bash c8/cleanup.sh
