@@ -45,3 +45,24 @@ chapter5:
 	bash c5/linux.sh
 	bash c5/glibc.sh
 	bash c5/libstdc++.sh
+
+
+.PHONY: chapter6
+chapter6:
+	bash c6/m4.sh
+	bash c6/ncurses.sh
+	bash c6/bash.sh
+	bash c6/coreutils.sh
+	bash c6/diffutils.sh
+	bash c6/file.sh
+	bash c6/findutils.sh
+	bash c6/gawk.sh
+	bash c6/grep.sh
+	bash c6/gzip.sh
+	bash c6/make.sh
+	bash c6/patch.sh
+	bash c6/sed.sh
+	bash c6/tar.sh
+	bash c6/xz.sh
+	bash c6/binutils.sh
+	bash c6/gcc.sh
