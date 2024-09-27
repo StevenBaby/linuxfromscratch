@@ -186,3 +186,7 @@ chapter10:
 	bash c10/config.fstab.sh
 	bash c10/linux.sh
 	bash c10/grub.sh
+
+.PHONY: chapter11
+chapter11:
+	bash c11/config.sh
