@@ -26,12 +26,15 @@ download: assets/wget-list assets/md5sums
 	mountpoint -q $(LFS) || mount /dev/sda1 $(LFS)
 
 	mkdir -pv $(LFS)/sources
+	cd $(LFS)/sources && rm -Rf -- */
 	mkdir -pv ~/sources
 
 ifeq ($(wildcard ~/sources/wget-list),)
 	cp assets/wget-list $(LFS)/sources
+	cp assets/wget-extra-list $(LFS)/sources
 	cp assets/md5sums $(LFS)/sources
 	cd $(LFS)/sources && wget --no-clobber --input-file=wget-list --continue --directory-prefix=$(LFS)/sources
+	cd $(LFS)/sources && wget --no-clobber --input-file=wget-extra-list --continue --directory-prefix=$(LFS)/sources
 	cd $(LFS)/sources/ && md5sum -c md5sums
 	cp $(LFS)/sources/* ~/sources
 else
@@ -190,3 +193,10 @@ chapter10:
 .PHONY: chapter11
 chapter11:
 	bash c11/config.sh
+
+.PHONY: extra
+extra:
+	bash extra/libunistring.sh
+	bash extra/libidn2.sh
+	bash extra/libpsl.sh
+	bash extra/wget.sh
